@@ -96,26 +96,19 @@ price is always current without needing to scan the transaction history.
 
 **Supporting images for the working code:**
 
-1.  Get Price value for TSCO ticker -- 301.00
+- Get Price value for TSCO ticker -- 301.00
 
-![](./Documentation/image1.png){width="6.258333333333334in"
-height="2.316666666666667in"}
+![](./Documentation/image1.png)
 
-2.  Make a transaction to ticker -- TSCO
+-  Make a transaction to ticker. Change the value to 400
 
-Change the value to 400
+![](./Documentation/image2.png)
 
-![](./Documentation/image2.png){width="6.258333333333334in"
-height="3.6666666666666665in"}
+![](./Documentation/image3.png)
 
-Transaction table
+- Check for the updated ticker value price
 
-![](./Documentation/image3.png){width="6.258333333333334in" height="2.975in"}
-
-3.  Check for the updated ticker value price
-
-![](./Documentation/image4.png){width="6.266666666666667in"
-height="2.7666666666666666in"}
+![](./Documentation/image4.png)
 
 --------------------------------------------------------------------
 
