@@ -207,7 +207,5 @@ on the database, it must be used judiciously in a stock trading context.
     mechanisms (e.g., Redis, in-memory caches) may not provide much
     benefit due to constant invalidation and cache misses.
 
--   **Use Cases Where Caching Is Beneficial**:
-    -   **Most Frequently Queried Tickers**: Caching the current average
-        or latest price of top 100 tickers might be viable with
-        intelligent TTL (Time To Live) settings.
+-   **Use Cases Where Caching Is Beneficial**: caching most frequently queried tickers top 100 tickers might be viable with
+    intelligent TTL (Time To Live) settings.
