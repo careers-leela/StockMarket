@@ -199,8 +199,8 @@ However, replication introduces trade-offs:
 
 **Caching Strategy**
 
-While caching can significantly improve read performance and reduce load
-on the database, it must be used judiciously in a stock trading context.
+Caching can significantly improve read performance and reduce load
+on the database but sit comes with it's own trade offs.
 
 -   **Limitation of Caching in High-Churn Systems**: In a high-frequency
     trading system, where data changes rapidly, traditional caching
