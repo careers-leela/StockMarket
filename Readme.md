@@ -1,12 +1,10 @@
----
-title: London Stock API
----
-
 **Solution Overview**
 
 The system is designed to handle real-time stock trade notifications
 from authorized brokers and expose the latest stock price data through a
 RESTful API.
+
+--------------------------------------------------------------------
 
 **REST API**
 
@@ -25,7 +23,9 @@ Endpoint description
 
   /api/stockexchange/batch      POST     Get current prices for multiple
                                          tickers
-  
+
+-----------------------------------------------------------------------
+
 **Database**
 
 Engine: PostgreSQL\
@@ -55,6 +55,8 @@ Stores individual trade records submitted by brokers.
 -   password
 Stores credentials and details of authorized brokers.
 
+--------------------------------------------------------------------
+
 **Triggers**
 
 A PostgreSQL trigger is configured to automatically update the latest
@@ -62,11 +64,12 @@ price in the stocks table whenever a new record is inserted into the
 stock_transactions table. This ensures that the ticker\'s latest market
 price is always current without needing to scan the transaction history.
 
+--------------------------------------------------------------------
+
 **Service Layer**
 
 -   **StockService\
     **Encapsulates the core business logic including:
-
     -   DTO transformations
     -   Price aggregation
     -   Delegation to the repository for persistence
@@ -74,6 +77,8 @@ price is always current without needing to scan the transaction history.
 -   **Repository Layer\
     **Uses Npgsql to interact directly with the PostgreSQL database,
     executing parameterized queries securely and efficiently.
+
+----------------------------------------------------------------------
 
 **Data Flow**
 
@@ -91,6 +96,8 @@ price is always current without needing to scan the transaction history.
 
 -   For average price, the system can optionally compute based on recent
     stock_transactions.
+
+--------------------------------------------------------------------
 
 **Supporting images for the working code:**
 
@@ -114,6 +121,8 @@ Transaction table
 
 ![](./Documentation/image4.png){width="6.266666666666667in"
 height="2.7666666666666666in"}
+
+--------------------------------------------------------------------
 
 **Code Improvements:**
 
@@ -166,6 +175,8 @@ analytics:
     transactions (from the last computed timestamp to now)** and updates
     the summary table. This **incremental calculation strategy**
     significantly improves performance by avoiding full table scans.
+
+-----------------------------------------------------------------------
 
 **Resilience Considerations:**
 
