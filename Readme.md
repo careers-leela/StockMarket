@@ -26,8 +26,7 @@ stock price data:
 
   /api/stockexchange/batch      POST     Get current prices for multiple
                                          tickers
-  --------------------------------------------------------------------------
-
+  
 **Database**
 
 Engine: PostgreSQL\
@@ -36,41 +35,25 @@ Schema: stock_exchange
 📋 Tables
 
 1.  stocks
-
     -   ticker (Primary Key)
-
     -   price
-
     -   timestamp
-
 Stores the latest stock price for each ticker symbol.
 
 2.  stock_transactions
-
 -   transaction_id (UUID, Primary Key)
-
 -   ticker (Foreign Key → stocks.ticker)
-
 -   broker_id (Foreign Key → broker_list.broker_id)
-
 -   price
-
 -   quantity
-
 -   timestamp
-
 Stores individual trade records submitted by brokers.
 
 3.  broker_list
-
     -   broker_id (Primary Key)
-
     -   broker_name
-
     -   username
-
     -   password
-
 Stores credentials and details of authorized brokers.
 
 **Triggers**
@@ -86,9 +69,7 @@ price is always current without needing to scan the transaction history.
     **Encapsulates the core business logic including:
 
     -   DTO transformations
-
     -   Price aggregation
-
     -   Delegation to the repository for persistence
 
 -   **Repository Layer\
