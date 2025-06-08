@@ -14,15 +14,15 @@ stock price data:
 
 Endpoint description
 
-  /api/stockexchange/trade      POST     Submit a new stock trade
+  /api/stockexchange/transaction      POST     Submit a new stock trade
 
-  /api/stockexchange/{ticker}   GET      Get average price of a specific
-                                         stock
+  /api/stockexchange/{ticker}         GET      Get price of a specific
+                                               stock
 
-  /api/stockexchange/all        GET      Get current prices of all stocks
+  /api/stockexchange/all              GET      Get prices of all stocks
 
-  /api/stockexchange/batch      POST     Get current prices for multiple
-                                         tickers
+  /api/stockexchange/batch            POST     Get prices for multiple
+                                               tickers
 
 -----------------------------------------------------------------------
 
@@ -153,8 +153,8 @@ The proposal is transitioning to a **NoSQL-based architecture**. This
 would decouple the write-heavy transaction processing from immediate
 database updates. Instead of performing synchronous writes and updates
 to the relational database, transactions can be **published to a message
-broker (e.g., Kafka or RabbitMQ)**, which will asynchronously persist
-the data to a **NoSQL store like Cassandra,** optimized for high write
+broker (e.g., NATS or Kafka)**, which will asynchronously persist
+the data to a **NoSQL store like Cassandra,** which is optimized for high write
 volumes.
 
 **Optimized Read Strategy**
@@ -208,10 +208,6 @@ on the database, it must be used judiciously in a stock trading context.
     benefit due to constant invalidation and cache misses.
 
 -   **Use Cases Where Caching Is Beneficial**:
-
-    -   **Broker Information**: Relatively static data like broker
-        profiles can be cached.
-
     -   **Most Frequently Queried Tickers**: Caching the current average
         or latest price of top 100 tickers might be viable with
         intelligent TTL (Time To Live) settings.
