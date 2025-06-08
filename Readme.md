@@ -66,14 +66,11 @@ price is always current without needing to scan the transaction history.
 
 **Service Layer**
 
--   **StockService\
-    **Encapsulates the core business logic including:
+-   StockService -  Encapsulates the core business logic including:
     -   DTO transformations
-    -   Price aggregation
     -   Delegation to the repository for persistence
 
--   **Repository Layer\
-    **Uses Npgsql to interact directly with the PostgreSQL database,
+-   Repository Layer - Uses Npgsql to interact directly with the PostgreSQL database
     executing parameterized queries securely and efficiently.
 
 ----------------------------------------------------------------------
