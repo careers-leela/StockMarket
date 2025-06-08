@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc
 using Microsoft.AspNetCore.Mvc;
 using StockMarket.Model;
 using StockMarket.Service;
@@ -102,5 +101,3 @@ namespace StockMarket.Controllers
         }
     }
 }
-StockMarketController.cs
-Displaying StockMarketController.cs.
