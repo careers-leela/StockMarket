@@ -35,9 +35,9 @@ Schema: stock_exchange
 📋 Tables
 
 1.  stocks
-    -   ticker (Primary Key)
-    -   price
-    -   timestamp
+-   ticker (Primary Key)
+-   price
+-   timestamp
 Stores the latest stock price for each ticker symbol.
 
 2.  stock_transactions
@@ -50,10 +50,10 @@ Stores the latest stock price for each ticker symbol.
 Stores individual trade records submitted by brokers.
 
 3.  broker_list
-    -   broker_id (Primary Key)
-    -   broker_name
-    -   username
-    -   password
+-   broker_id (Primary Key)
+-   broker_name
+-   username
+-   password
 Stores credentials and details of authorized brokers.
 
 **Triggers**
@@ -81,9 +81,7 @@ price is always current without needing to scan the transaction history.
 **1. Transaction Submission**
 
 -   Client submits a transaction via the POST /tradtransaction endpoint.
-
 -   Trade is inserted into the stock_transactions table.
-
 -   Database trigger automatically updates the stocks table with the new
     price.
 
@@ -124,12 +122,12 @@ height="2.7666666666666666in"}
 in the current version of the system:**
 
 1.  Authentication and Authorization
-
 2.  Unit Tests
-
 3.  Inline code can be made to stored procedures
-
 4.  Thorough testing and Validation
+
+
+--------------------------------------------------------------------
 
 **Enhancements**:
 
