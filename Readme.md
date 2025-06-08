@@ -12,8 +12,6 @@ Framework: ASP.NET Core Web API\
 The system exposes a set of endpoints to submit trades and retrieve
 stock price data:
 
-Endpoint description
-
   /api/stockexchange/transaction      POST     Submit a new stock trade
 
   /api/stockexchange/{ticker}         GET      Get price of a specific
