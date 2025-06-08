@@ -130,10 +130,9 @@ height="2.7666666666666666in"}
 in the current version of the system:**
 
 1.  Authentication and Authorization
-2.  Unit Tests
-3.  Inline code can be made to stored procedures
+2.  Unit Testing
+3.  Inline code - SQL queries can be changed to stored procedures
 4.  Thorough testing and Validation
-
 
 --------------------------------------------------------------------
 
