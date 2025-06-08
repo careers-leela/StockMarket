@@ -14,9 +14,8 @@ Framework: ASP.NET Core Web API\
 The system exposes a set of endpoints to submit trades and retrieve
 stock price data:
 
-  --------------------------------------------------------------------------
-  Endpoint                      Method   Description
-  ----------------------------- -------- -----------------------------------
+Endpoint description
+
   /api/stockexchange/trade      POST     Submit a new stock trade
 
   /api/stockexchange/{ticker}   GET      Get average price of a specific
@@ -32,7 +31,7 @@ stock price data:
 Engine: PostgreSQL\
 Schema: stock_exchange
 
-📋 Tables
+Tables
 
 1.  stocks
 -   ticker (Primary Key)
